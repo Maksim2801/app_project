@@ -1,0 +1,6 @@
+2025-03-09 20:45:52,913 - delivery_service - INFO - Application started, database initialized
+2025-03-09 20:45:52,914 - delivery_service - INFO - Starting delivery cost calculation
+2025-03-09 20:46:12,112 - delivery_service - INFO - Fetching parcel types
+2025-03-09 20:46:12,119 - delivery_service - INFO - Found 3 parcel types
+2025-03-09 20:46:17,696 - delivery_service - INFO - Fetching parcel types
+2025-03-09 20:46:17,707 - delivery_service - INFO - Found 3 parcel types

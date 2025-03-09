@@ -1,0 +1,35 @@
+[project]
+name = "delivery-service"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Maksim2801",email = "whellwood@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "delivery_service", from = "src"}]
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.110.0"
+uvicorn = "^0.29.0"
+sqlalchemy = "^2.0.0"
+psycopg2-binary = "^2.9.9"
+redis = "^5.0.0"
+httpx = "^0.27.0"
+python-dotenv = "^1.0.0"
+itsdangerous = "^2.1.2"  # Добавляем эту строку
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.0"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

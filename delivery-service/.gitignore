@@ -1,0 +1,9 @@
+.poetry/
+.env/
+venv/
+.virtualenv/
+*.log
+logs/
+.env
+*.env
+.env.local
