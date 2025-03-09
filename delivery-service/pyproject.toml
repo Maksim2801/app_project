@@ -23,7 +23,7 @@ psycopg2-binary = "^2.9.9"
 redis = "^5.0.0"
 httpx = "^0.27.0"
 python-dotenv = "^1.0.0"
-fastapi-sessions = "^0.3.2"  # Укажем более новую версию
+itsdangerous = "^2.1.2"  # Добавляем эту строку
 
 
 [tool.poetry.group.dev.dependencies]

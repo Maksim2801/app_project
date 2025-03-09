@@ -1,4 +1,5 @@
 from pydantic import BaseModel, Field
+from typing import Any
 
 class ParcelCreate(BaseModel):
     name: str = Field(..., min_length=1)
@@ -12,14 +13,28 @@ class ParcelResponse(BaseModel):
     weight: float
     type_name: str
     content_value: float
-    delivery_cost: str  # "Не рассчитано" или значение
+    delivery_cost: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class ParcelTypeResponse(BaseModel):
     id: int
     name: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True
+
+class ParcelsQueryParams(BaseModel):
+    skip: int = 0
+    limit: int = 10
+    type_id: int = None
+    has_delivery_cost: bool = None
+
+class ErrorResponse(BaseModel):
+    status: str = "error"
+    message: str
+
+class SuccessResponse(BaseModel):
+    status: str = "success"
+    data: Any
